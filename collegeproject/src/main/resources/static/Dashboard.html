@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBank | Dashboard</title>
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+<div class="app">
+
+    <aside class="sidebar">
+        <h2 class="brand">My<span>Bank</span></h2>
+        <p class="menu-title">MAIN MENU</p>
+
+        <a class="nav active" href="/dashboard.html">▦ &nbsp; Dashboard</a>
+        <a class="nav" href="#accounts">▣ &nbsp; My Accounts</a>
+        <a class="nav" href="#transactions">↔ &nbsp; Transactions</a>
+        <a class="nav" href="#services">⚙ &nbsp; Services</a>
+
+        <div class="sidebar-bottom">
+            <p>Demo banking interface</p>
+            <a class="nav" href="/">↩ &nbsp; Back to Login</a>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">YOUR FINANCES AT A GLANCE</p>
+                <h1>Banking Dashboard</h1>
+            </div>
+            <div class="profile">
+                <div class="avatar">U</div>
+                <div>
+                    <strong>Demo User</strong>
+                    <p>Personal Banking</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <p class="eyebrow light">WELCOME BACK</p>
+                <h2>Hello, Demo User!</h2>
+                <p>Here is a summary of your demo account.</p>
+            </div>
+            <div class="welcome-icon">₹</div>
+        </section>
+
+        <section class="summary" id="accounts">
+            <article class="card balance-card">
+                <p>Total Available Balance</p>
+                <h2 id="balance">₹ 52,450.00</h2>
+                <button id="toggleBalance" class="text-button"
+                        type="button">Hide balance</button>
+                <p class="small">Demo data — not a real bank balance</p>
+            </article>
+
+            <article class="card">
+                <p>Account Number</p>
+                <h2>•••• 4582</h2>
+                <span class="tag">Savings Account</span>
+            </article>
+
+            <article class="card">
+                <p>Total Transactions</p>
+                <h2>4</h2>
+                <span class="tag">Sample records</span>
+            </article>
+        </section>
+
+        <section class="quick-section" id="services">
+            <h2>Quick Actions</h2>
+            <div class="actions">
+                <button type="button" class="action"
+                        data-action="Deposit">＋ <span>Deposit</span></button>
+                <button type="button" class="action"
+                        data-action="Transfer">↗ <span>Transfer</span></button>
+                <button type="button" class="action"
+                        data-action="Pay Bills">▤ <span>Pay Bills</span></button>
+                <button type="button" class="action"
+                        data-action="Account Details">♙ <span>Account Details</span></button>
+            </div>
+            <p id="actionMessage" class="message" aria-live="polite"></p>
+        </section>
+
+        <section class="transactions card" id="transactions">
+            <div class="section-heading">
+                <div>
+                    <h2>Recent Transactions</h2>
+                    <p>Your latest sample activities</p>
+                </div>
+                <a href="#transactions">View all</a>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly Salary</td>
+                            <td>14 Oct 2026</td>
+                            <td>Credit</td>
+                            <td class="credit">+ ₹35,000</td>
+                            <td><span class="status">Demo</span></td>
+                        </tr>
+                        <tr>
+                            <td>Electricity Bill</td>
+                            <td>12 Oct 2026</td>
+                            <td>Debit</td>
+                            <td class="debit">− ₹1,450</td>
+                            <td><span class="status">Demo</span></td>
+                        </tr>
+                        <tr>
+                            <td>Grocery Shopping</td>
+                            <td>10 Oct 2026</td>
+                            <td>Debit</td>
+                            <td class="debit">− ₹2,100</td>
+                            <td><span class="status">Demo</span></td>
+                        </tr>
+                        <tr>
+                            <td>Received Money</td>
+                            <td>08 Oct 2026</td>
+                            <td>Credit</td>
+                            <td class="credit">+ ₹5,000</td>
+                            <td><span class="status">Demo</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>College Banking Project · Frontend Demo</footer>
+    </main>
+</div>
+
+<script src="/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #24334b;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 230px;
+    flex-shrink: 0;
+    background: #142b4a;
+    color: white;
+    padding: 25px 16px;
+}
+
+.sidebar h2 {
+    margin: 0 10px 30px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 14px 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    color: #dbe5f3;
+    text-decoration: none;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #2c4b72;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+}
+
+.header p,
+.card p,
+.card span {
+    color: #778398;
+}
+
+.avatar {
+    background: #dce8ff;
+    color: #2458ac;
+    border-radius: 50%;
+    padding: 14px;
+    font-weight: bold;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card,
+.panel {
+    background: white;
+    padding: 23px;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px #142b4a0d;
+}
+
+.card h2 {
+    font-size: 25px;
+}
+
+.green {
+    color: #159768;
+}
+
+.red {
+    color: #d64d5b;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+th {
+    color: #778398;
+}
+
+#message {
+    margin-top: 20px;
+    color: #778398;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 550px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
